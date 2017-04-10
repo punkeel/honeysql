@@ -13,6 +13,12 @@ I won't be updating this project, I just wanted to open-source it.
 It sould not be valuable anyway, so .... who cares? :D
 
 
+## Features
+
+- Read only database using SQLite
+- Detects wrong amount of lines or strange values, thanks to Reproducible Builds™
+- Uses Docker! Uses Node.js! Uses SQLite! Doesn't use Bitcoin yet :cry:
+
 ## Installation
 
 To install: 

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>*{display: none;}</style>
+<!-- Prevent legitimate users from browsing this -->
+<meta http-equiv="refresh" content="0; url=https://google.com/"></head>
+<body class="container">
+    <main>
+        <div class="jumbotron">
+            <h1>Admin space <small>Debug mode - remove before prod</small></h1>
+        </div>
+        <div>
+        <% if(rows == null) { %>
+            <a href="<% fullUrl %>?id=1">View first user</a>
+        <% }else{ %>
+            <table>
+            <tr><th>id</th><td>Name</td><td>Email</td></tr>
+            <% for(var i=0; i < rows.length; i++) {%>
+               <tr>
+               <td><%= rows[i].id %></td>
+               <td><%= rows[i].name %></td>
+               <td><%= rows[i].email %></td>
+               </tr>
+            <% } %>
+            </table>
+        <% } %>
+        </div>
+    </main>
+</body>
+</html>

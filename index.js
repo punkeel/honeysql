@@ -58,12 +58,10 @@ function injectMe(req, res) {
         } else if (rows.length == 1) {
             var row = rows[0];
             if (!checkRow(row, id)) {
-                // console.trace("Unexpected row data with id=<" + id + "> from " + req.ip);
-                console.info("Unexpected row data from " + req.ip);
+                console.trace("Unexpected row data with id=<" + id + "> from " + req.ip);
             }
         } else {
-            // console.trace("Unexpected rows.length:" + rows.length + ", expected 1 with id=<" + id + "> from " + req.ip);
-            console.info("Returned " + rows.length + " rows from " + req.ip);
+            console.trace("Unexpected rows.length:" + rows.length + ", expected 1 with id=<" + id + "> from " + req.ip);
         }
 
         res.render("index", {

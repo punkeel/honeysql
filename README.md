@@ -32,6 +32,18 @@ To follow the logs in real-time:
 
 ```
 $ docker logs -f my-honeysql
+npm info it worked if it ends with ok
+npm info using npm@3.10.10
+npm info using node@v6.10.2
+npm info lifecycle honeysql@0.0.1~prestart: honeysql@0.0.1
+npm info lifecycle honeysql@0.0.1~start: honeysql@0.0.1
+
+> honeysql@0.0.1 start /usr/src/app
+> node index.js
+
+Unexpected rows.length:20, expected 1 with id=<1 or id<20> from ::ffff:10.8.0.4
+Unexpected rows.length:1000, expected 1 with id=<1 or 1> from ::ffff:10.8.0.4
+...
 ```
 
 To stop it: (you shouldn't, really. HoneySQL is great for your health.)

